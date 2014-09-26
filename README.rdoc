@@ -1,0 +1,43 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+	https://console.developers.google.com/project
+	https://console.developers.google.com/project/loyal-flames-713
+
+	https://github.com/intridea/oauth2
+
+	https://code.google.com/p/google-api-ruby-client/source/browse/calendar/calendar.rb?repo=samples
+
+	Private key password : notasecret
+
+Client ID for web application
+
+			CLIENT ID 511360970710-fk6l9riv8ma7th19b0g1ehtq666g0deo.apps.googleusercontent.com
+			CLIENT SECRET  Y2kw0vL2Y0LLLbV0eYCnW_em
+
+	https://developers.google.com/+/features/sign-in
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

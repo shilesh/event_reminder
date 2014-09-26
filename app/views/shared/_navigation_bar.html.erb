@@ -1,0 +1,27 @@
+	<nav class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#event-navbar-collapse">
+					<span class="sr-only"> Toggle navigation </span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<%= link_to 'Event Reminder', '/', :class => 'navbar-brand' %>
+
+			</div> <!-- header-->
+			<div class="collapse navbar-collapse" id="event-navbar-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#section-calendar"> Calendar</a></li>
+					<li><a href="#section-events"> Events </a></li>
+					<li><a href="#section-add-event"> Add Event </a></li>
+					<li><a href="#section-faq"> F.A.Q</a></li>
+					<li><a href="#section-contact"> Contact</a></li>
+					<li> <a id='signout' class="btn btn-info" style="display: none"> Log Out </a> </li>
+				</ul>
+
+			</div> <!-- End collapse-->
+
+		</div>
+	</nav>

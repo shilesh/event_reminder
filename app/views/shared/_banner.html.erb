@@ -1,0 +1,60 @@
+<!-- BANNER -->
+<div class="jumbotron">
+  <div class="container text-center">
+    <h2>Event Reminder</h2>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+    <!-- <div class="btn-group">
+      <a href="#" class="btn btn-lg btn-success"> Login </a>
+    </div> -->
+
+    <!-- Adding Google+ Sign-In button to your page  -->
+    <span id="signinButton">
+      <span
+        class="g-signin"
+        data-callback="signinCallback"
+        data-clientid="511360970710-fk6l9riv8ma7th19b0g1ehtq666g0deo.apps.googleusercontent.com"
+        data-cookiepolicy="single_host_origin"
+        data-requestvisibleactions="http://schema.org/AddAction"
+        data-scope="https://www.googleapis.com/auth/plus.login">
+      </span>
+    </span>
+
+  </div>
+
+</div> <!-- jumbotron -->
+
+<!-- https://developers.google.com/+/web/signin/add-button -->
+<script type="text/javascript">
+  // Include the Google+ script on your page
+  (function() {
+   var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+   po.src = 'https://apis.google.com/js/client:plusone.js';
+   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+   })();
+
+  // Your callback function is a JavaScript function written by you that is triggered after the sign-in button is loaded. The function is passed an object that represents the authorization result. When sign-in is successful, the authorization object will contain an access token in the access_token field. If the user is not signed-in you can inspect the error field to determine the cause.
+  function signinCallback(authResult) {
+
+    if (authResult['status']['signed_in']) {
+      // Update the app to reflect a signed in user
+      // Hide the sign-in button now that the user is authorized, for example:
+      document.getElementById('signinButton').setAttribute('style', 'display: none');
+      $('#signout').css('display','block');
+    } else {
+      // Update the app to reflect a signed out user
+      // Possible error values:
+      //   "user_signed_out" - User is signed-out
+      //   "access_denied" - User denied access to your app
+      //   "immediate_failed" - Could not automatically log in the user
+      $('#signout').css('display','none');
+      console.log('Sign-in state: ' + authResult['error']);
+    } // if
+  } // signinCallback(authResult)
+
+</script>
